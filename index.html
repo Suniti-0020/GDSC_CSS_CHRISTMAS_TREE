@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Tree</title>
+
+    <style>
+           * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            text-align: center;
+        }
+
+        .container .star {
+            margin: 50px 0;
+            position: relative;
+            top: 35px;
+            left: 81px;
+            display: block;
+            color: yellow;
+            width: 0px;
+            height: 0px;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid yellow;
+            border-left: 20px solid transparent;
+            transform: rotate(35deg);
+        }
+        .container .star:before {
+            border-bottom: 16px solid yellow;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            position: absolute;
+            height: 0;
+            margin: 0;
+            width: 0;
+            top: -9px;
+            left: -14px;
+            display: block;
+            content: '';
+            transform: rotate(-35deg);
+        }
+        .container .star:after {
+            margin: 0;
+            position: absolute;
+            display: block;
+            color: yellow;
+            top: 2px;
+            left: -23px;
+            width: 0px;
+            height: 0px;
+            border-right: 20px solid transparent;
+            border-bottom: 14px solid yellow;
+            border-left: 20px solid transparent;
+            transform: rotate(-70deg);
+            content:'';
+        }
+
+        .container .star {
+            animation: rotate 2s infinite ease-in-out;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateY(0deg) rotateZ(35deg);
+            }
+            50% {
+                transform: rotateY(180deg) rotateZ(35deg);
+            }
+            100% {
+                transform: rotateY(360deg) rotateZ(35deg);
+            }
+        }
+
+        .container .tree1 {
+            width: 0;
+            height: 0;
+            border-left: 100px solid transparent;
+            border-right: 100px solid transparent;
+            border-bottom: 100px solid green;
+        }
+
+        .container .tree2 {
+            width: 0;
+            height: 0;
+            border-left: 140px solid transparent;
+            border-right: 140px solid transparent;
+            border-bottom: 120px solid green;
+            position: relative;
+            top:-50px ;
+            left: -40px ;
+        }
+
+        .container .tree3 {
+            width: 0;
+            height: 0;
+            border-left: 180px solid transparent;
+            border-right: 180px solid transparent;
+            border-bottom: 140px solid green;
+            position: relative;
+            top: -115px;
+            left: -80px;
+        }
+
+        .container .tree4 {
+            width: 0;
+            height: 0;
+            border-left: 220px solid transparent;
+            border-right: 220px solid transparent;
+            border-bottom: 160px solid green;
+            position: relative;
+            top: -190px;
+            left: -120px;
+        }
+        
+        .container .box {
+            width: 60px;
+            height: 60px;
+            background-color: rgb(165, 42, 42);
+            position: relative;
+            top: -190px;
+            left: 70px;
+        }
+
+        .container .balls1 {
+            display: flex;
+            gap: 190px;
+            position: absolute;
+        }
+
+        .container .balls2 {
+            display: flex;
+            gap: 270px;
+            position: absolute;
+        }
+
+        .container .balls3 {
+            display: flex;
+            gap: 350px;
+            position: absolute;
+        }
+
+        .container .balls4 {
+            display: flex;
+            gap: 430px;
+            position: absolute;
+        }
+
+        /* applying to all balls  */
+
+        .container .ball {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: blue;
+            animation: change infinite 4s;
+        }
+
+        @keyframes change {
+            0% {
+                background-color: orange;
+            }
+            25% {
+                background-color: purple;
+            }
+            50% {
+                background-color: red;
+            }
+            75% {
+                background-color: blue ;
+            }
+            100% {
+                background-color: orange;
+            }
+        }
+
+        .container .balls1 .b1, .b2 {
+            position: relative;
+            top: -480px;
+            left: -10px;
+        }
+
+        .container .balls2 .b3, .b4 {
+            position: relative;
+            top: -410px;
+            left: -50px;
+        }
+
+        .container .balls3 .b5, .b6 {
+            position: relative;
+            top: -335px;
+            left: -90px;
+        }
+
+        .container .balls4 .b7, .b8 {
+            position: relative;
+            top: -250px;
+            left: -130px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="star"></div>
+        <div class="tree1"></div>
+        <div class="tree2"></div>
+        <div class="tree3"></div>
+        <div class="tree4"></div>
+        <div class="box"></div>
+        <div class="balls1">
+            <div class="ball b1"></div>
+            <div class="ball b2"></div>
+        </div>
+        <div class="balls2">
+            <div class="ball b3"></div>
+            <div class="ball b4"></div>
+        </div>
+        <div class="balls3">
+            <div class="ball b5"></div>
+            <div class="ball b6"></div>
+        </div>
+        <div class="balls4">
+            <div class="ball b7"></div>
+            <div class="ball b8"></div>
+        </div>
+    </section>
+</body>
+</html>
